@@ -14,6 +14,8 @@ class UsersController < ApplicationController
 
     if @user.save
       flash[:notice] = 'Welcome to Get Clients Now app. The app that will help you track prospective clients from first contact to final sale.'
+      session[:user_id] = @user.id
+      redirect_to dashboard_path
     else
       render :new
     end

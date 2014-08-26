@@ -1,0 +1,15 @@
+<div class='col-md-12'>
+
+<h2 class='center-text'>Sign In</h2>
+
+<%= form_tag('/login') do %>
+  <%= label_tag(:username) %>
+  <%= text_field_tag(:username) %>
+  <br/>
+  <%= label_tag(:password) %>
+  <%= password_field_tag(:password) %>
+  <br/>
+  <%= submit_tag('Log In') %>
+<% end %>
+
+</div>
