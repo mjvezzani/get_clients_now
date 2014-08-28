@@ -14,5 +14,31 @@
  *= require_self
  */
 
+
+ @import url(http://fonts.googleapis.com/css?family=Quicksand:400,300|Chau+Philomene+One|Cinzel:400,900);
+
+ $serif-font: 'Cinzel';
+ $sans-serif-font: 'Quicksand';
+ $font-family-sans-serif:$sans-serif-font;
+ $font-family-serif: $serif-font;
+ $font-family-base: $font-family-sans-serif;
+ $navbar-default-bg: #312312;
+ $body-bg: #CCCC33;
+ $border-radius-base: 1em 0.3em 1em 1em;
  @import "bootstrap-sprockets";
  @import "bootstrap";
+
+
+
+ .jumbotron {
+ 
+  box-shadow: 0 0 5em 1em #000000;
+  
+    h2 {
+      text-shadow: 2.2em .8em .3em #000000;
+    }
+  h1 {
+    font-family: 'Cinzel';
+    font-weight: 900;
+  }
+}

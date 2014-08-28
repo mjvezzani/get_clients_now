@@ -7,7 +7,7 @@ gem 'bcrypt-ruby', '3.1.2'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 # Use SCSS for stylesheets
-gem 'sass-rails', '~> 4.0.3'
+gem 'sass-rails', '>= 3.2'
 # Use Bootstrap for styling
 gem 'bootstrap-sass', '~> 3.2.0'
 # Add browser vendor prefixes automatically

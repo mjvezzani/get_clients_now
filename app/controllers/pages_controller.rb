@@ -7,7 +7,7 @@ class PagesController < ApplicationController
   end
 
   def dashboard
-
+    @clients = Client.all
   end
 
   private
