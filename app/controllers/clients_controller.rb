@@ -16,6 +16,7 @@ class ClientsController < ApplicationController
 
   def create
     @client = Client.new(client_params)
+    @client.days_till_follow_up = (@client.days_till_follow_up - Date.today).round
 
     if @client.save
       flash[:notice] = 'New client created'
@@ -45,7 +46,7 @@ class ClientsController < ApplicationController
   private
 
   def client_params
-    params.require(:client).permit(:name, :email, :phone, :address, :date_of_first_contact, :where_contacted, :history_item)
+    params.require(:client).permit(:name, :email, :phone, :address, :date_of_first_contact, :where_contacted, :history_item, :days_till_follow_up)
   end
 
   def set_client

@@ -2,17 +2,18 @@
 
 <!-- People to contact next -->
 <div class='row'>
-  <div class='col-md-8'>
+  <div class='col-md-4'>
     <% @clients.each do |client| %>
-      <div class='well'>
+      <div class='well contact-card'>
         <h3><%= client.name %></h3>
         <p><%= client.email %></p>
         <p><%= client.phone %></p>
+        <span class='days-till-follow-up'>Call in <%= client.days_till_follow_up %> days</span>
       </div>
     <% end %>
   </div>
 <!-- Other things to consider -->
-  <div class='col-md-4'>
+  <div class='col-md-8'>
 
   </div>
 </div>
