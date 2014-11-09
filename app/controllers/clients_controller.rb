@@ -16,6 +16,7 @@ class ClientsController < ApplicationController
 
   def create
     @client = Client.new(client_params)
+    @client.user_id = current_user.id
     @client.days_till_follow_up = (@client.days_till_follow_up - Date.today).round
 
     if @client.save

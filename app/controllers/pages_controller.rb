@@ -7,7 +7,7 @@ class PagesController < ApplicationController
   end
 
   def dashboard
-    @clients = Client.all
+    @clients = Client.where(user_id: current_user.id)
   end
 
   private
